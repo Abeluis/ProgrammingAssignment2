@@ -1,15 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+# Crear una matriz
+mat <- matrix(c(4, 3, 3, 2), nrow = 2, ncol = 2)
 
-## Write a short comment describing this function
+# Crear el objeto "matriz especial"
+cacheMatrix <- makeCacheMatrix(mat)
 
-makeCacheMatrix <- function(x = matrix()) {
+# Calcular la inversa (no está en caché todavía)
+inverse <- cacheSolve(cacheMatrix)
+print(inverse)
 
-}
-
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
+# Obtener la inversa desde la caché (ya está almacenada)
+cachedInverse <- cacheSolve(cacheMatrix)
+print(cachedInverse)
